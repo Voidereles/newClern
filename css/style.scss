@@ -1,0 +1,64 @@
+// @import "custom";
+// @import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+    height: 100vh;
+    background: rgb(240, 240, 240);
+}
+
+.wrapper {
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+}
+
+.cta {
+    display: block;
+    padding: 2rem 2rem 2rem 0;
+    font-size: 1.4rem;
+}
+
+img {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+ul.transition {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+ul.transition li {
+    transform: scaleY(0);
+    background: white;
+    width: 20%;
+}
