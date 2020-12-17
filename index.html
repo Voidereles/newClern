@@ -8,35 +8,77 @@
     <meta name="description"
         content="Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body data-barba="wrapper">
 
-    <ul class="transition">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-
     <div class="wrapper">
-        <header class="header">
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                </ul>
-            </nav>
+        <header id="header" class="header navbar">
+            <div class="container-fluid">
+                <a href="#" class="header__logo" aria-label="365SDC">
+                    <img class="header__logo-img" src="images/logo.png" alt="Clern">
+
+
+                </a>
+                <button aria-expanded="false" aria-label="Menu" class="button nav-toggle button--icon-only">
+                    <span class="button__text">
+                        <div class="nav-toggle__inner">
+                            <svg aria-hidden="true" height="24" viewBox="0 0 24 24" width="24"
+                                class="icon nav-toggle__icon nav-toggle__icon--menu">
+                                <path fill="#000" d="M22 6H2V4h20v2zM2 13h16v-2H2v2zm0 7h20v-2H2v2z"></path>
+                            </svg>
+                            <svg aria-hidden="true" height="24" viewBox="0 0 24 24" width="24"
+                                class="icon nav-toggle__icon nav-toggle__icon--close">
+                                <path fill="#000"
+                                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                                </path>
+                            </svg>
+                        </div>
+                    </span>
+                </button>
+                <nav class="header__nav">
+
+                    <div class="header__nav-left d-flex justify-content-center w-100">
+                        <a class="header__nav-link" href="#projects">About</a>
+                        <a class="header__nav-link" href="#careers">Careers</a>
+                        <a class="header__nav-link" href="#news">News</a>
+                        <a class="header__nav-link" href="#contact">Contact</a>
+                    </div>
+                    <div class="header__nav-right d-flex justify-content-end w-100">
+                        <a class="header__nav-link" href="#tel:+48519017017"><span class="font-body-xs">+48
+                            </span>519 017 017</a>
+                        <a class="header__nav-link" href="mailto:info@clern.pl">info@clern.pl</a>
+                        <a class="btn header__btn" href="#contact">Zaloguj
+                            się</a>
+                    </div>
+                </nav>
+
+
+            </div>
+
         </header>
 
+        <!-- <ul class="transition">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
         <main class="main" data-barba="container" data-barba-namespace="home">
-            <div class="left">
+
+
+
+
+            <!-- <div class="left">
                 <h1>An Ongoing Experience</h1>
                 <a href="about.html" class="cta">about</a>
             </div>
-            <div class="owl-carousel owl-theme">
+            <img src="images/worker-1.png" alt="worker"> -->
+            <!-- <div class="owl-carousel owl-theme">
                 <div>
                     1 <img src="images/worker-1.png" alt="interior"> </div>
                 <div>
@@ -51,14 +93,20 @@
                     <img src="images/worker-1.png" alt="interior"> </div>
                 <div>
                     <img src="images/worker-1.png" alt="interior"> </div>
-            </div>
+            </div> -->
 
         </main>
 
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="app.js" async defer></script>
+    <!-- <script src="https://unpkg.com/@barba/core"></script>
+
+    GSAP for animation
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

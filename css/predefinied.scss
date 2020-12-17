@@ -1,0 +1,82 @@
+$bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
+$durationXS: 200ms;
+$durationS: 300ms;
+$durationM: 400ms;
+$durationL: 600ms;
+$durationXL: 800ms;
+
+$clern-blue: #14b8eb;
+$clern-lightGreen:#66ba5a;
+$clern-lightYellow: #d3ef8b;
+$clern-darkGrey: #322c2e;
+$clern-grey: #f3f7ff;
+
+$fontStack: vag-rundschrift-d,
+Montserrat,
+Gotham,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+San Francisco,
+Segoe UI,
+メイリオ,
+Meiryo,
+Segoe UI,
+sans-serif;
+$fontWeightThin: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$fontSizeH1:3rem;
+$fontSizeH2: 2rem;
+$fontSizeH3: 1.625rem;
+$fontSizeBodyL: 1.25rem;
+$fontSizeBodyM: 1.125rem;
+$fontSizeBodyS: 1rem;
+$fontSizeBodyXS: 0.8rem;
+$fontSizeSmallest: 0.5rem;
+$spaceLetters:0.45px;
+$lineHeightTitle: 1.1;
+$lineHeightBody: 1.5;
+
+$spaceOuter: 64px;
+$spaceXS: 4px;
+$spaceS: 8px;
+$spaceM: 16px;
+$spaceL: 24px;
+$spaceXL: 32px;
+$space2XL: 48px;
+$space3XL: 64px;
+$space4XL: 96px;
+$space5XL: 128px;
+$section-margin:5rem;
+
+$shadow-md: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+$shadow-lg: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$shadow-xl: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$shadow-2xl: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
+
+.container-fluid {
+    max-width: 1700px;
+}
+
+.font-body-xs {
+    font-size: $fontSizeBodyXS;
+}
+
+.btn {
+    border-radius: 200px;
+    transition: $durationS $bezierFastoutSlowin;
+}

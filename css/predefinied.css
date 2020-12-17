@@ -1,0 +1,14 @@
+.container-fluid {
+  max-width: 1700px;
+}
+
+.font-body-xs {
+  font-size: 0.8rem;
+}
+
+.btn {
+  border-radius: 200px;
+  -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*# sourceMappingURL=predefinied.css.map */

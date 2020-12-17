@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAsEA,AAAA,gBAAgB,CAAC;EACb,SAAS,EAAE,MAAM;CACpB;;AAED,AAAA,aAAa,CAAC;EACV,SAAS,EAxCI,MAAM;CAyCtB;;AAED,AAAA,IAAI,CAAC;EACD,aAAa,EAAE,KAAK;EACpB,UAAU,EA9EF,KAAK,CAFK,4BAA8B;CAiFnD",
+    "sources": [
+        "predefinied.scss"
+    ],
+    "names": [],
+    "file": "predefinied.css"
+}
