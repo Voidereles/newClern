@@ -27,5 +27,8 @@
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "sass-loader": "^10.1.0"
+  },
+  "devDependencies": {
+    "sass": "^1.30.0"
   }
 }

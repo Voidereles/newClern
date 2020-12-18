@@ -54,8 +54,7 @@ a {
         position: relative;
         background: transparent;
         border-radius: .0010px;
-        overflow: hidden;
-        transition: 0.3s;
+        transition: $durationM;
 
         &.scrolled {
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
@@ -78,7 +77,6 @@ a {
     &__logo {
         display: flex;
         position: relative;
-        padding: $spaceS;
         z-index: 16;
         transition: 0.5s $bezierFastoutSlowin;
         cursor: pointer;
@@ -172,6 +170,31 @@ a {
         display: flex;
     }
 
+    &__nav-right .header__nav-link {
+        color: white;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 0px;
+            height: 2px;
+            background-color: white;
+            bottom: -0.5rem;
+            position: absolute;
+            left: 0;
+            transition: $durationS $bezierFastoutSlowin;
+        }
+
+        &:hover {
+            color: white;
+
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
     &__nav-link {
         color: black;
         align-self: center;
@@ -203,9 +226,89 @@ a {
         }
     }
 
+    &__lang-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        background: white;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        border: none;
+        border-radius: 50%;
+        transition: $durationM;
+
+        svg polygon {
+            transition: $durationM;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            border: none;
+            background: $clern-blue;
+
+            // svg path,
+            // svg polygon {
+            //     fill: white;
+            // }
+
+            .header__lang-all {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__lang-active {
+        display: flex;
+    }
+
+    &__lang-arrow {
+        width: 10px;
+        margin-left: 4px;
+    }
+
+    &__lang-all {
+        position: absolute;
+        top: calc(100% - 60px);
+        transform: translateY(-50%);
+        background: white;
+        border: 1px solid $clern-blue;
+        padding: 70px 0 20px 0;
+        width: 60px;
+        border-radius: 200px;
+        z-index: -1;
+        color: black;
+        transition: $durationL $bezierFastoutSlowin;
+        // transition-delay: 0.5s, 0s;
+        // transition-property: opacity, transform;
+        font-size: $fontSizeBodyXS;
+        opacity: 0;
+
+        input[type=radio] {
+            display: none;
+        }
+
+        .text {
+            cursor: pointer;
+            margin: auto;
+        }
+
+        input[type="radio"]:checked~.text {
+            color: $clern-blue;
+            font-weight: 500;
+        }
+    }
+
     &__btn {
-        background-color: transparent;
-        color: white;
+        background-color: white;
+        color: $clern-blue;
         border: 1px solid white;
         width: 130px;
         height: 60px;
@@ -215,13 +318,53 @@ a {
         text-transform: uppercase;
 
         &:hover {
-            background-color: #14b8eb;
+            background-color: $clern-blue;
             color: white;
         }
     }
+}
 
+.main {
+    .container-fluid {
+        // max-width: initial;
+    }
+}
 
+.owl-main {
+    &__item {
+        display: flex;
+        align-items: center;
+    }
 
+    &__left {
+        margin-top: 88px;
+    }
+
+    &__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__text {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    &__img-container {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        text-align: right;
+    }
+
+    &__img {
+        object-fit: cover;
+        max-width: 100%;
+        width: 88% !important;
+        display: inline-block !important;
+        z-index: -1;
+    }
 }
 
 

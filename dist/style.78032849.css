@@ -179,9 +179,8 @@ a::selection {
   position: relative;
   background: transparent;
   border-radius: .0010px;
-  overflow: hidden;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 .header .container-fluid.scrolled {
@@ -203,7 +202,6 @@ a::selection {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 8px;
   z-index: 16;
   -webkit-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -316,6 +314,32 @@ a::selection {
   display: flex;
 }
 
+.header__nav-right .header__nav-link {
+  color: white;
+  display: inline-block;
+  position: relative;
+}
+
+.header__nav-right .header__nav-link::before {
+  content: '';
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  bottom: -0.5rem;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__nav-right .header__nav-link:hover {
+  color: white;
+}
+
+.header__nav-right .header__nav-link:hover:before {
+  width: 100%;
+}
+
 .header__nav-link {
   color: black;
   -ms-flex-item-align: center;
@@ -350,9 +374,96 @@ a::selection {
   color: white;
 }
 
+.header__lang-container {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  width: 60px;
+  background: white;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+          box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  border: none;
+  border-radius: 50%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.header__lang-container svg polygon {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.header__lang-container:hover, .header__lang-container:focus, .header__lang-container:active {
+  outline: none;
+  border: none;
+  background: #14b8eb;
+}
+
+.header__lang-container:hover .header__lang-all, .header__lang-container:focus .header__lang-all, .header__lang-container:active .header__lang-all {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header__lang-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__lang-arrow {
+  width: 10px;
+  margin-left: 4px;
+}
+
+.header__lang-all {
+  position: absolute;
+  top: calc(100% - 60px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: white;
+  border: 1px solid #14b8eb;
+  padding: 70px 0 20px 0;
+  width: 60px;
+  border-radius: 200px;
+  z-index: -1;
+  color: black;
+  -webkit-transition: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.8rem;
+  opacity: 0;
+}
+
+.header__lang-all input[type=radio] {
+  display: none;
+}
+
+.header__lang-all .text {
+  cursor: pointer;
+  margin: auto;
+}
+
+.header__lang-all input[type="radio"]:checked ~ .text {
+  color: #14b8eb;
+  font-weight: 500;
+}
+
 .header__btn {
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  color: #14b8eb;
   border: 1px solid white;
   width: 130px;
   height: 60px;
@@ -365,6 +476,46 @@ a::selection {
 .header__btn:hover {
   background-color: #14b8eb;
   color: white;
+}
+
+.owl-main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.owl-main__left {
+  margin-top: 88px;
+}
+
+.owl-main__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.owl-main__text {
+  max-width: 750px;
+  margin: auto;
+}
+
+.owl-main__img-container {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  text-align: right;
+}
+
+.owl-main__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  width: 88% !important;
+  display: inline-block !important;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
