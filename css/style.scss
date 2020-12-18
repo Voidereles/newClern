@@ -324,11 +324,6 @@ a {
     }
 }
 
-.main {
-    .container-fluid {
-        // max-width: initial;
-    }
-}
 
 .owl-main {
     &__item {
@@ -340,15 +335,48 @@ a {
         margin-top: 88px;
     }
 
-    &__right {
-        position: absolute;
-        top: 0;
-        right: 0;
+    &__heading {
+        color: $clern-lightGreen;
+        font-size: 5.625rem;
+        position: relative;
+
+        .letter {
+            display: inline-block;
+        }
+
+
+        &::before {
+            content: '';
+            background-color: #d3ef8b;
+            height: 10px;
+            width: 70%;
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: 15px;
+            z-index: -1;
+            border-radius: 200px;
+
+        }
     }
+
+    &__p {
+        line-height: 1.6;
+        font-size: $fontSizeBodyL;
+    }
+
 
     &__text {
         max-width: 750px;
         margin: auto;
+    }
+
+    &__btn {}
+
+    &__right {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     &__img-container {
@@ -357,6 +385,7 @@ a {
         position: relative;
         text-align: right;
     }
+
 
     &__img {
         object-fit: cover;

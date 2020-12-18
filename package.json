@@ -20,15 +20,19 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "animate": "^1.0.0",
+    "animejs": "^3.2.1",
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.3",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "owl.carousel": "^2.3.4",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.2",
     "sass": "^1.30.0"
   }
 }

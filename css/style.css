@@ -491,15 +491,43 @@ a::selection {
   margin-top: 88px;
 }
 
-.owl-main__right {
+.owl-main__heading {
+  color: #66ba5a;
+  font-size: 5.625rem;
+  position: relative;
+}
+
+.owl-main__heading .letter {
+  display: inline-block;
+}
+
+.owl-main__heading::before {
+  content: '';
+  background-color: #d3ef8b;
+  height: 10px;
+  width: 70%;
   position: absolute;
-  top: 0;
-  right: 0;
+  display: block;
+  left: 0;
+  bottom: 15px;
+  z-index: -1;
+  border-radius: 200px;
+}
+
+.owl-main__p {
+  line-height: 1.6;
+  font-size: 1.25rem;
 }
 
 .owl-main__text {
   max-width: 750px;
   margin: auto;
+}
+
+.owl-main__right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .owl-main__img-container {
