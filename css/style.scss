@@ -12,11 +12,11 @@ body {
     -webkit-user-modify: none;
     -moz-user-modify: none;
     -ms-user-modify: none;
-    user-modify: none;
     -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+    // user-modify: none;
+    // tap-highlight-color: transparent;
+    // font-smoothing: antialiased;
     font-family: $fontStack;
     font-weight: 300;
 }
@@ -316,6 +316,7 @@ a {
         margin-left: 1rem;
         line-height: 60px;
         text-transform: uppercase;
+        transition: 0.2s;
 
         &:hover {
             background-color: $clern-blue;
@@ -371,7 +372,19 @@ a {
         margin: auto;
     }
 
-    &__btn {}
+    &__btn {
+        text-transform: uppercase;
+        border-radius: 200px;
+        background-color: $clern-blue;
+        border-color: $clern-blue;
+        color: white;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        transition: $durationM $bezierFastoutSlowin;
+
+        &:hover {
+            background: white;
+        }
+    }
 
     &__right {
         position: absolute;

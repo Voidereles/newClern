@@ -302,11 +302,8 @@ body {
   -webkit-user-modify: none;
   -moz-user-modify: none;
   -ms-user-modify: none;
-  user-modify: none;
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   font-family: vag-rundschrift-d, Montserrat, Gotham, system-ui, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, メイリオ, Meiryo, Segoe UI, sans-serif;
   font-weight: 300;
 }
@@ -561,6 +558,7 @@ a::selection {
   margin-left: 1rem;
   line-height: 60px;
   text-transform: uppercase;
+  transition: 0.2s;
 }
 .header__btn:hover {
   background-color: #14b8eb;
@@ -601,6 +599,18 @@ a::selection {
 .owl-main__text {
   max-width: 750px;
   margin: auto;
+}
+.owl-main__btn {
+  text-transform: uppercase;
+  border-radius: 200px;
+  background-color: #14b8eb;
+  border-color: #14b8eb;
+  color: white;
+  box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.owl-main__btn:hover {
+  background: white;
 }
 .owl-main__right {
   position: absolute;
