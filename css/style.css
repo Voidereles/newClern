@@ -478,8 +478,8 @@ span::selection {
 
 .header__lang-active {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  z-index: 2;
+  position: relative;
 }
 
 .header__lang-arrow {
@@ -560,10 +560,18 @@ span::selection {
   color: #66ba5a;
   font-size: 5.625rem;
   position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .owl-main__heading .letter {
   display: inline-block;
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .owl-main__heading::before {
@@ -587,6 +595,10 @@ span::selection {
 .owl-main__text {
   max-width: 750px;
   margin: auto;
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .owl-main__btn {
@@ -602,8 +614,10 @@ span::selection {
   -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
           box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   overflow: hidden;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) translateX(0);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) translateX(0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .owl-main__btn:before {
@@ -623,13 +637,13 @@ span::selection {
 .owl-main__btn:hover {
   color: #14b8eb;
   text-decoration: none;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) scale(1.05);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) scale(1.05);
 }
 
 .owl-main__btn:hover:before {
-  -webkit-transform: translateX(-95%);
-          transform: translateX(-95%);
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) translateX(-95%);
+          transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) translateX(-95%);
 }
 
 .owl-main__btn:active {
@@ -1397,8 +1411,6 @@ span::selection {
     border-radius: 50%;
     margin-right: 0.5rem;
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
