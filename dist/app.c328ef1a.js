@@ -3638,7 +3638,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 $(document).ready(function () {
   var _owlMain$owlCarousel, _owlTestimonials$owlC;
 
-  var time = 1115; // time in seconds
+  var time = 5; // time in seconds
 
   var $progressBar, $bar, $elem, isPause, tick, percentTime;
 
@@ -3739,9 +3739,9 @@ $(document).ready(function () {
   }
 
   function start() {
-    percentTime = 0; // isPause = false;
-
-    isPause = true; //run interval every 10 miliseconds
+    percentTime = 0;
+    isPause = false; // isPause = true;
+    //run interval every 10 miliseconds
 
     tick = setInterval(interval, 10);
   }

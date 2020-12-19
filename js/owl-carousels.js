@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var time = 1115; // time in seconds
+    var time = 5; // time in seconds
 
     var $progressBar,
         $bar,
@@ -121,8 +121,8 @@ $(document).ready(function () {
 
     function start() {
         percentTime = 0;
-        // isPause = false;
-        isPause = true;
+        isPause = false;
+        // isPause = true;
 
 
         //run interval every 10 miliseconds
