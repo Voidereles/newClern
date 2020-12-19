@@ -856,7 +856,6 @@ span::selection {
 }
 
 .owl-main__border-dots {
-  border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
   border-image-slice: 33% 33%;
   border-style: dotted;
   border-color: white;
@@ -982,7 +981,6 @@ span::selection {
 }
 
 .steps__border-dots {
-  border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
   border-image-slice: 33% 33%;
   border-style: dotted;
   border-color: #14b8eb;
@@ -990,7 +988,7 @@ span::selection {
   border-image-repeat: round;
   position: absolute;
   top: -32.2%;
-  left: 43.3%;
+  left: 43.25%;
   border-bottom-right-radius: 50px;
   width: 15%;
   height: 50%;
@@ -1529,6 +1527,10 @@ span::selection {
     opacity: 1;
     -webkit-transform: translate(-50%, -50%) rotate(0);
             transform: translate(-50%, -50%) rotate(0);
+  }
+  .header__lang-active {
+    position: relative;
+    z-index: 10;
   }
   .header__lang-active-text {
     color: #66ba5a;

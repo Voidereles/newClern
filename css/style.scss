@@ -468,7 +468,7 @@ span {
     }
 
     &__border-dots {
-        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
+        // border-image-source: url("../images/svg/dots.svg");
         border-image-slice: 33% 33%;
         border-style: dotted;
         border-color: white;
@@ -590,7 +590,7 @@ span {
     padding: 3rem 0 17vw 0;
 
     &__border-dots {
-        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
+        // border-image-source: url("../images/svg/dots.svg");
         border-image-slice: 33% 33%;
         border-style: dotted;
         border-color: $clern-blue;
@@ -598,7 +598,7 @@ span {
         border-image-repeat: round;
         position: absolute;
         top: -32.2%;
-        left: 43.3%;
+        left: 43.25%;
         border-bottom-right-radius: 50px;
         width: 15%;
         height: 50%;
@@ -1142,6 +1142,11 @@ span {
                     transform: translate(-50%, -50%) rotate(0);
                 }
             }
+        }
+
+        &__lang-active {
+            position: relative;
+            z-index: 10;
         }
 
         &__lang-active-text {
