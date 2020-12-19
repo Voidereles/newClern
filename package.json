@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Voidereles/newClern/issues"
   },
-  "homepage": "https://github.com/Voidereles/newClern#readme",
+  "homepage": "https://voidereles.github.io/newClern",
   "dependencies": {
     "@barba/core": "^2.9.7",
     "animate": "^1.0.0",

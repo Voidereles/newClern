@@ -1,22 +1,16 @@
-import barba from '@barba/core';
+// import barba from '@barba/core';
 // import gsap from "gsap";
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/style.scss';
 import './js/pageTransitioning.js';
 import './js/owl-carousels.js';
 import './js/headerScript.js';
 
-// import anime from 'animejs/lib/anime.es.js';
 import anime from 'animejs/lib/anime.es.js';
-// import lax from 'lax.js'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
-// const anime = require('animejs');
 
 window.onload = function () {
     AOS.init({
