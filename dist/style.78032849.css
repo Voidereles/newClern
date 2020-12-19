@@ -327,6 +327,11 @@ ul.transition li {
         animation-fill-mode: initial;
     }
 } */
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
 html,
 body {
   margin: 0;

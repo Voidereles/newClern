@@ -3822,6 +3822,11 @@ $(document).ready(function () {
     event.preventDefault();
     $('.header__nav').removeClass('header__nav--entered');
     $('.nav-toggle').removeClass('nav-toggle--entered');
+    $('body').removeClass('stop-scrolling');
+
+    if ($('body').hasClass('stop-scrolling') == false) {
+      $('body').unbind('touchmove');
+    }
   });
   headerOnScroll();
   $('a[href^="#"]').click(function () {
@@ -3849,6 +3854,15 @@ $(document).ready(function () {
   $('.nav-toggle').click(function () {
     $('.header__nav').toggleClass('header__nav--entered');
     $('.nav-toggle').toggleClass('nav-toggle--entered');
+    $('body').toggleClass('stop-scrolling');
+
+    if ($('body').hasClass('stop-scrolling') == false) {
+      $('body').unbind('touchmove');
+    } else {
+      $('body').bind('touchmove', function (e) {
+        e.preventDefault();
+      });
+    }
   });
 });
 },{}],"node_modules/animejs/lib/anime.es.js":[function(require,module,exports) {
