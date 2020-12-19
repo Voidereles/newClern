@@ -3795,7 +3795,6 @@ function headerOnScroll() {
   var prevScrollpos = window.pageYOffset;
 
   window.onscroll = function () {
-    console.log('dasd');
     var currentScrollPos = window.pageYOffset;
 
     if (this.window.pageYOffset > 75) {

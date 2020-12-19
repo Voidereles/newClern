@@ -7,6 +7,7 @@ import './js/pageTransitioning.js';
 import './js/owl-carousels.js';
 import './js/headerScript.js';
 
+
 import anime from 'animejs/lib/anime.es.js';
 import AOS from 'aos';
 // import 'aos/dist/aos.css';
