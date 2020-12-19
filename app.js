@@ -2,31 +2,17 @@
 // import gsap from "gsap";
 
 import 'owl.carousel'
-
 import './js/pageTransitioning.js';
 import './js/owl-carousels.js';
 import './js/headerScript.js';
-
-
 import anime from 'animejs/lib/anime.es.js';
 import AOS from 'aos';
-// import 'aos/dist/aos.css';
 
 
 window.onload = function () {
     AOS.init({
         duration: 700,
     });
-
-    // Add animation bindings to elements
-    // lax.addElements('.lax', {
-    //     scrollY: {
-    //         translateX: [
-    //             ["elInY", "elCenterY"],
-    //             [0, '500'],
-    //         ]
-    //     }
-    // })
 }
 
 function changeOwlMainHeight() {

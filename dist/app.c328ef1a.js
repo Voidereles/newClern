@@ -5642,20 +5642,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // import barba from '@barba/core';
 // import gsap from "gsap";
-// import 'aos/dist/aos.css';
 window.onload = function () {
   _aos.default.init({
     duration: 700
-  }); // Add animation bindings to elements
-  // lax.addElements('.lax', {
-  //     scrollY: {
-  //         translateX: [
-  //             ["elInY", "elCenterY"],
-  //             [0, '500'],
-  //         ]
-  //     }
-  // })
-
+  });
 };
 
 function changeOwlMainHeight() {

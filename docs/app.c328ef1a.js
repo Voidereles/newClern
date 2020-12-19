@@ -5642,20 +5642,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // import barba from '@barba/core';
 // import gsap from "gsap";
-// import 'aos/dist/aos.css';
 window.onload = function () {
   _aos.default.init({
     duration: 700
-  }); // Add animation bindings to elements
-  // lax.addElements('.lax', {
-  //     scrollY: {
-  //         translateX: [
-  //             ["elInY", "elCenterY"],
-  //             [0, '500'],
-  //         ]
-  //     }
-  // })
-
+  });
 };
 
 function changeOwlMainHeight() {
@@ -5742,7 +5732,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38287" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41817" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

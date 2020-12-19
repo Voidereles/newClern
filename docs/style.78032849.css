@@ -1584,6 +1584,9 @@ span::selection {
   .owl-main__left {
     margin-top: 21vh;
   }
+  .owl-main__p {
+    max-width: initial;
+  }
 }
 
 @media (min-width: 1921px) {
