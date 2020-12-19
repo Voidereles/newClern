@@ -6,7 +6,9 @@ import 'owl.carousel'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.scss';
-import './js/pageTransitioning.js'
+import './js/pageTransitioning.js';
+import './js/owl-carousels.js';
+import './js/headerScript.js';
 
 // import anime from 'animejs/lib/anime.es.js';
 import anime from 'animejs/lib/anime.es.js';
@@ -41,22 +43,12 @@ function changeOwlMainHeight() {
 }
 
 $(document).ready(function () {
-    $('.owl-main').owlCarousel({
-        lazyLoad: true,
-        loop: true,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
-        items: 1,
-        margin: 0,
-        // autoplay: true,
-        autoplayTimeout: 5000,
-        mouseDrag: false,
-        touchDrag: false,
-        pullDrag: false
 
-    });
 
-    changeOwlMainHeight();
+    if (window.innerWidth > 1200) {
+        changeOwlMainHeight();
+
+    }
 
     const allLang = document.querySelectorAll(".header__lang-all .text");
     Array.from(allLang).forEach(element => {
@@ -101,8 +93,9 @@ let resizeTimer;
 $(window).on('resize', function (e) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-
-        changeOwlMainHeight();
+        if (window.innerWidth > 1200) {
+            changeOwlMainHeight();
+        }
 
     }, 150);
 });

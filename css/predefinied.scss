@@ -6,6 +6,7 @@ $durationL: 600ms;
 $durationXL: 800ms;
 
 $clern-blue: #14b8eb;
+$clern-blue-gradient:linear-gradient(210deg, rgba(18, 178, 233, 1) 100%, rgba(24, 200, 243, 1) 100%);
 $clern-lightGreen:#66ba5a;
 $clern-lightYellow: #d3ef8b;
 $clern-darkGrey: #322c2e;
@@ -79,4 +80,24 @@ rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 .btn {
     border-radius: 200px;
     transition: $durationS $bezierFastoutSlowin;
+}
+
+.font-increased {
+    font-size: 150%;
+}
+
+.font-size-doubled {
+    font-size: 200%;
+}
+
+@keyframes mainOwlImgAnimation {
+    from {
+        transform: translate(25rem, -18.15rem);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }

@@ -3651,12 +3651,79 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/13440/node_modules/parcel/src/builtins/css-loader.js"}],"css/style.scss":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/13440/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/bundle-url.js"}],"css/style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/13440/node_modules/parcel/src/builtins/css-loader.js"}],"js/pageTransitioning.js":[function(require,module,exports) {
+},{"./..\\images\\background-steps-with-tel.png":[["background-steps-with-tel.31fcdf68.png","images/background-steps-with-tel.png"],"images/background-steps-with-tel.png"],"./..\\images\\offer-flats-bg.png":[["offer-flats-bg.8feaa854.png","images/offer-flats-bg.png"],"images/offer-flats-bg.png"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/css-loader.js"}],"js/pageTransitioning.js":[function(require,module,exports) {
 // function pageTransition() {
 //     var tl = gsap.timeline();
 //     tl.to('ul.transition li', {
@@ -3721,6 +3788,226 @@ module.hot.accept(reloadCSS);
 //         }
 //     }]
 // })
+},{}],"js/owl-carousels.js":[function(require,module,exports) {
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+$(document).ready(function () {
+  var _owlMain$owlCarousel, _owlTestimonials$owlC;
+
+  var time = 1115; // time in seconds
+
+  var $progressBar, $bar, $elem, isPause, tick, percentTime;
+
+  function progressBar(elem) {
+    $elem = elem;
+    buildProgressBar();
+    start();
+  }
+
+  function buildProgressBar() {
+    $progressBar = $("<div>", {
+      class: "progressBar"
+    });
+    $bar = $("<div>", {
+      class: "bar"
+    });
+    $progressBar.append($bar).appendTo($(" .owl-testimonials .owl-dots .active, .owl-main .owl-dots .active"));
+  }
+
+  function moved() {
+    $(".progressBar").remove();
+    buildProgressBar();
+    clearTimeout(tick);
+    start();
+  }
+
+  var owlMain = $(".owl-main");
+  var owlTestimonials = $(".owl-testimonials");
+
+  function counter(event) {
+    var items = event.item.count;
+    var item = event.item.index + 2;
+
+    if (item > items) {
+      item = item - items;
+    }
+
+    if (item == 4) {
+      item = 1;
+    }
+
+    $('.main-counter').html('<span class="main-counter__number">' + item + '</span><span class="main-counter__slash">/ </span>' + '<span class="main-counter__total">' + items + '</span>');
+  }
+
+  owlMain.on('initialized.owl.carousel', function (event) {
+    // $('.owl-main .owl-dots .active').insertAdjacentHTML('<div class="main-counter">dasdas</div>');
+    counter(event);
+  });
+  owlMain.on('translate.owl.carousel', function (event) {
+    counter(event);
+  });
+  owlMain.owlCarousel((_owlMain$owlCarousel = {
+    onInitialized: progressBar,
+    onTranslate: moved,
+    nav: false,
+    dots: true,
+    items: 1,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        dots: false
+      },
+      600: {
+        dots: true
+      }
+    },
+    lazyLoad: true,
+    loop: true,
+    // animateIn: 'fadeIn',
+    // animateOut: 'fadeOut',
+    margin: 32,
+    autoplay: true
+  }, _defineProperty(_owlMain$owlCarousel, "autoplay", false), _defineProperty(_owlMain$owlCarousel, "autoplayTimeout", 5000), _owlMain$owlCarousel));
+  owlTestimonials.owlCarousel((_owlTestimonials$owlC = {
+    autoplayHoverPause: true,
+    onInitialized: moved,
+    onTranslate: moved,
+    loop: true,
+    nav: true,
+    dots: true
+  }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "navText", [" <img src='images/svg/light-arrow-left.svg' class='fa fa-chevron-left'>", " <img src='images/svg/light-arrow-right.svg' class='fa fa-chevron-right'>"]), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
+
+  function interval() {
+    if (isPause === false) {
+      percentTime += 1 / time; //reset timer
+
+      $(".bar").css({
+        width: percentTime + "%"
+      }); //if percentTime is equal or greater than 100
+
+      if (percentTime >= 100) {
+        //slide to next item 
+        console.log(true);
+        $(".owl-main").trigger('next.owl.carousel');
+        $(".owl-testimonials").trigger('next.owl.carousel');
+      }
+    }
+  }
+
+  function start() {
+    percentTime = 0; // isPause = false;
+
+    isPause = true; //run interval every 10 miliseconds
+
+    tick = setInterval(interval, 10);
+  }
+
+  ; // owlMain.on('mouseover', function () {
+  //     isPause = true;
+  // });
+  // owlMain.on('mouseout', function () {
+  //     isPause = false;
+  // });
+
+  owlTestimonials.on('mouseover', function () {
+    isPause = true;
+  });
+  owlTestimonials.on('mouseout', function () {
+    isPause = false;
+  });
+  $('.owl-offer').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    nav: false,
+    dots: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        stagePadding: 48
+      },
+      600: {
+        items: 2,
+        nav: false,
+        stagePadding: 72
+      },
+      992: {
+        items: 4,
+        nav: false,
+        loop: true
+      },
+      1440: {
+        items: 5,
+        nav: false,
+        loop: false
+      }
+    }
+  });
+});
+},{}],"js/headerScript.js":[function(require,module,exports) {
+function headerOnScroll() {
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function () {
+    console.log('dasd');
+    var currentScrollPos = window.pageYOffset;
+
+    if (this.window.pageYOffset > 75) {
+      $('.header .container-fluid').addClass('scrolled');
+
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-145px";
+      }
+
+      prevScrollpos = currentScrollPos;
+    } else {
+      $('.header .container-fluid').removeClass('scrolled');
+    }
+  };
+}
+
+$(document).ready(function () {
+  $("a[href*='#']:not([href='#])").click(function () {
+    var target = $(this).attr("href");
+    $('html,body').stop().animate({
+      scrollTop: $(target).offset().top - 10
+    }, 1000);
+    event.preventDefault();
+    $('.header__nav').removeClass('header__nav--entered');
+    $('.nav-toggle').removeClass('nav-toggle--entered');
+  });
+  headerOnScroll();
+  $('a[href^="#"]').click(function () {
+    document.getElementById("header").style.top = "0";
+  });
+  $(window).bind('scroll', function () {
+    var currentTop = $(window).scrollTop();
+    var elems = $('.scrollspy');
+    elems.each(function (index) {
+      var elemTop = $(this).offset().top - 100;
+      var elemBottom = elemTop + $(this).height();
+
+      if (currentTop >= elemTop && currentTop <= elemBottom) {
+        var id = $(this).attr('id');
+        var navElem = $('a[href="#' + id + '"]');
+        navElem.addClass('active').siblings().removeClass('active');
+      }
+    });
+  });
+  $('.header__logo').click(function () {
+    $('html,body').stop().animate({
+      scrollTop: 0
+    }, 1000);
+  });
+  $('.nav-toggle').click(function () {
+    $('.header__nav').toggleClass('header__nav--entered');
+    $('.nav-toggle').toggleClass('nav-toggle--entered');
+  });
+});
 },{}],"node_modules/animejs/lib/anime.es.js":[function(require,module,exports) {
 "use strict";
 
@@ -5514,6 +5801,10 @@ require("./css/style.scss");
 
 require("./js/pageTransitioning.js");
 
+require("./js/owl-carousels.js");
+
+require("./js/headerScript.js");
+
 var _animeEs = _interopRequireDefault(require("animejs/lib/anime.es.js"));
 
 var _aos = _interopRequireDefault(require("aos"));
@@ -5551,20 +5842,10 @@ function changeOwlMainHeight() {
 }
 
 $(document).ready(function () {
-  $('.owl-main').owlCarousel({
-    lazyLoad: true,
-    loop: true,
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    items: 1,
-    margin: 0,
-    // autoplay: true,
-    autoplayTimeout: 5000,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false
-  });
-  changeOwlMainHeight();
+  if (window.innerWidth > 1200) {
+    changeOwlMainHeight();
+  }
+
   var allLang = document.querySelectorAll(".header__lang-all .text");
   Array.from(allLang).forEach(function (element) {
     element.addEventListener('click', function () {
@@ -5602,10 +5883,12 @@ var resizeTimer;
 $(window).on('resize', function (e) {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(function () {
-    changeOwlMainHeight();
+    if (window.innerWidth > 1200) {
+      changeOwlMainHeight();
+    }
   }, 150);
 });
-},{"@barba/core":"node_modules/@barba/core/dist/barba.umd.js","owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./css/style.scss":"css/style.scss","./js/pageTransitioning.js":"js/pageTransitioning.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js","aos/dist/aos.css":"node_modules/aos/dist/aos.css"}],"../../../../AppData/Roaming/npm-cache/_npx/13440/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@barba/core":"node_modules/@barba/core/dist/barba.umd.js","owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./css/style.scss":"css/style.scss","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/owl-carousels.js":"js/owl-carousels.js","./js/headerScript.js":"js/headerScript.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js","aos/dist/aos.css":"node_modules/aos/dist/aos.css"}],"../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -5633,7 +5916,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65339" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58053" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -5809,5 +6092,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/13440/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/8384/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map
