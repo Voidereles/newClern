@@ -3719,7 +3719,7 @@ $(document).ready(function () {
     loop: true,
     nav: true,
     dots: true
-  }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "navText", [" <img src='images/svg/light-arrow-left.svg' class='fa fa-chevron-left'>", " <img src='images/svg/light-arrow-right.svg' class='fa fa-chevron-right'>"]), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
+  }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
 
   function interval() {
     if (isPause === false) {

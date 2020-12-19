@@ -468,11 +468,11 @@ span {
     }
 
     &__border-dots {
+        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
+        border-image-slice: 33% 33%;
         border-style: dotted;
         border-color: white;
         border-width: 4.8px;
-        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
-        border-image-slice: 33% 33%;
         border-image-repeat: round;
         position: absolute;
         top: 40%;
@@ -590,11 +590,11 @@ span {
     padding: 3rem 0 17vw 0;
 
     &__border-dots {
+        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
+        border-image-slice: 33% 33%;
         border-style: dotted;
         border-color: $clern-blue;
         border-width: 4.8px;
-        border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg");
-        border-image-slice: 33% 33%;
         border-image-repeat: round;
         position: absolute;
         top: -32.2%;
@@ -875,6 +875,131 @@ span {
         text-decoration: none;
     }
 }
+
+
+.testimonials {
+    position: relative;
+
+    &--main-site {
+        margin-top: calc(-14vh - 140px)
+    }
+
+    &__heading {
+        font-size: $fontSizeH1;
+    }
+
+
+    .container-fluid {
+        background-color: #5DB65A;
+        background: #5db65a;
+        background-image: -moz-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background-image: -webkit-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background-image: -ms-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background: linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        padding-top: calc(10vh + 347px/2);
+        min-height: 40vh;
+        border-bottom-right-radius: 10vh;
+        border-top-left-radius: 10vh;
+        width: 90%;
+    }
+
+    &--about-us .container-fluid {
+        padding-top: 110px;
+    }
+
+    &__item {
+
+        max-width: 969px;
+        margin: 0 auto;
+    }
+
+
+    .no-radius {
+        border-radius: 0 !important;
+    }
+
+    &__portrait,
+    .owl-carousel .owl-item img {
+        border-radius: 50%;
+        background-color: white;
+        width: 90px;
+        display: inline-block;
+    }
+
+    .owl-dots {
+        margin-top: -6vh;
+        padding: 3rem 0;
+    }
+
+    &__card {
+        border: 0;
+        background-color: transparent;
+    }
+
+    &__blockquote {
+        font-size: $fontSizeBodyL;
+        line-height: 1.364;
+        padding-top: 2rem;
+    }
+
+    &__blockquote::before {
+        content: ' ';
+        position: absolute;
+        background-image: url("../images/quotesign.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 0.75rem;
+        height: 0.75rem;
+        top: 1rem;
+        left: 3rem;
+        -moz-transform: matrix(3.58676812988438, 0, 0, 3.58643712507357, 0, 0);
+        -webkit-transform: matrix(3.58676812988438, 0, 0, 3.58643712507357, 0, 0);
+        -ms-transform: matrix(3.58676812988438, 0, 0, 3.58643712507357, 0, 0);
+        transform: matrix(3.58676812988438, 0, 0, 3.58643712507357, 0, 0);
+    }
+
+    .owl-nav span {
+        position: absolute;
+        max-height: 70px;
+        top: 0;
+        transition: $durationM;
+        color: white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 3rem;
+        height: 70px;
+        color: transparent;
+
+        &:hover {
+            transform: translate(10px, 10px);
+        }
+
+        &:active {
+            transform: scale(0.8) translate(10px, 10px);
+        }
+    }
+
+    .owl-prev span {
+        left: 5%;
+        background-image: url("../images/svg/light-arrow-left.svg");
+
+    }
+
+    .owl-next span {
+        background-image: url("../images/svg/light-arrow-right.svg");
+        right: 5%;
+
+        &:hover {
+            transform: translate(-10px, 10px);
+        }
+
+        &:active {
+            transform: scale(0.8) translate(-10px, 10px);
+        }
+    }
+}
+
 
 @media (min-width: 1201px) and (max-width:1440px) {
     .owl-main {

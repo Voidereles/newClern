@@ -98,7 +98,6 @@ $(document).ready(function () {
         dots: true,
         nav: true,
         lazyLoad: true,
-        navText: [" <img src='images/svg/light-arrow-left.svg' class='fa fa-chevron-left'>", " <img src='images/svg/light-arrow-right.svg' class='fa fa-chevron-right'>"],
         items: 1
     });
 

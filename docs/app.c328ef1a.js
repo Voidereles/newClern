@@ -3719,7 +3719,7 @@ $(document).ready(function () {
     loop: true,
     nav: true,
     dots: true
-  }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "navText", [" <img src='images/svg/light-arrow-left.svg' class='fa fa-chevron-left'>", " <img src='images/svg/light-arrow-right.svg' class='fa fa-chevron-right'>"]), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
+  }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
 
   function interval() {
     if (isPause === false) {
@@ -5746,7 +5746,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38639" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33951" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
