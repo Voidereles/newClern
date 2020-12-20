@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 
     owlTestimonials.owlCarousel({
-        autoplayHoverPause: true,
+        // autoplayHoverPause: true,
         onInitialized: moved,
         onTranslate: moved,
         loop: true,
@@ -168,6 +168,34 @@ $(document).ready(function () {
                 items: 5,
                 nav: false,
                 loop: false,
+            }
+        }
+    })
+
+
+
+    $('.owl-news').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                dots: false,
+                nav: false
+            },
+            600: {
+                items: 2,
+                dots: false,
+                nav: false
+            },
+            992: {
+                items: 3,
+                dots: false,
+                nav: false
             }
         }
     })

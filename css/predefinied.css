@@ -20,6 +20,56 @@
   font-size: 200%;
 }
 
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: transparent;
+  z-index: 10;
+  -webkit-transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+
+.focused .form-label {
+  -webkit-transform: translateY(-125%);
+          transform: translateY(-125%);
+  font-size: .75em;
+}
+
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  max-width: 270px;
+  outline: 0;
+  border: 0;
+  -webkit-transition: -webkit-box-shadow 150ms ease-out;
+  transition: -webkit-box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out, -webkit-box-shadow 150ms ease-out;
+  background-color: transparent;
+}
+
+.form-input:-internal-autofill-selected {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.form-label:hover {
+  cursor: text;
+}
+
+.form-input.filled {
+  -webkit-box-shadow: 0 2px 0 0 lightgreen;
+          box-shadow: 0 2px 0 0 lightgreen;
+}
+
 @-webkit-keyframes mainOwlImgAnimation {
   from {
     -webkit-transform: translate(25rem, -18.15rem);
