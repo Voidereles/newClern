@@ -1684,6 +1684,108 @@ span::selection {
   border-bottom: 1px solid white;
 }
 
+.footer {
+  z-index: -1;
+  margin-top: -90px;
+}
+
+.footer .container-fluid {
+  background-color: #f3f7ff;
+  border-top-left-radius: 15vh;
+  width: 100%;
+}
+
+.footer--main-site .container-fluid {
+  padding-top: 3rem;
+  margin-top: -75px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.footer .row:last-child {
+  border-top: 1px solid rgba(25, 25, 25, 0.1);
+}
+
+.footer__logo {
+  max-height: 60px;
+}
+
+.footer__grey {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.footer__link {
+  color: #322c2e;
+  font-size: 1.125rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.footer__link:hover {
+  color: #14b8eb;
+  text-decoration: none;
+}
+
+.footer__tel, .footer__email {
+  color: #14b8eb;
+  display: inline-block;
+  font-size: 1.625rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__tel:hover, .footer__tel:visited, .footer__email:hover, .footer__email:visited {
+  text-decoration: none;
+  color: #14b8eb;
+}
+
+.footer__tel::after, .footer__email::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #14b8eb;
+  bottom: 0;
+  right: -100%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.footer__tel:hover::after, .footer__email:hover::after {
+  right: 0;
+}
+
+.footer__social-link {
+  display: inline-block;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.footer__social-link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.footer__social-link:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.footer__social-link:focus {
+  outline: none;
+}
+
+.footer__pay-img {
+  opacity: 0.14;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.footer__pay-img:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 1201px) and (max-width: 1440px) {
   .owl-main__heading {
     font-size: 5rem;
@@ -1996,7 +2098,8 @@ span::selection {
     width: 100%;
     max-width: 100%;
   }
-  .newsletter .row {
+  .newsletter .row,
+  .footer .container-fluid {
     border-radius: 0;
   }
 }
