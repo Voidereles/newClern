@@ -2,12 +2,12 @@ function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
-        if (this.window.pageYOffset > 75) {
+        if (this.window.pageYOffset > 48) {
             $('.header .container-fluid').addClass('scrolled');
 
 
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById("header").style.top = "0";
+                document.getElementById("header").style.top = "16px";
             } else {
                 document.getElementById("header").style.top = "-145px";
             }

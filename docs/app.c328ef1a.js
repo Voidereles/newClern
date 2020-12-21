@@ -3762,7 +3762,8 @@ $(document).ready(function () {
   $('.owl-offer').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
+    autoplay: false,
     nav: false,
     dots: false,
     responsiveClass: true,
@@ -3794,13 +3795,15 @@ $(document).ready(function () {
     margin: 20,
     autoplay: true,
     autoplayTimeout: 2000,
+    autoplayHoverPause: true,
     nav: false,
     dots: false,
     responsive: {
       0: {
         items: 1,
         dots: false,
-        nav: false
+        nav: false,
+        stagePadding: 48
       },
       600: {
         items: 2,
@@ -3822,11 +3825,11 @@ function headerOnScroll() {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (this.window.pageYOffset > 75) {
+    if (this.window.pageYOffset > 48) {
       $('.header .container-fluid').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "0";
+        document.getElementById("header").style.top = "16px";
       } else {
         document.getElementById("header").style.top = "-145px";
       }
@@ -5784,7 +5787,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42851" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41929" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

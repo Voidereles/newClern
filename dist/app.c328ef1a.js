@@ -3762,7 +3762,8 @@ $(document).ready(function () {
   $('.owl-offer').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
+    autoplay: false,
     nav: false,
     dots: false,
     responsiveClass: true,
@@ -3794,13 +3795,15 @@ $(document).ready(function () {
     margin: 20,
     autoplay: true,
     autoplayTimeout: 2000,
+    autoplayHoverPause: true,
     nav: false,
     dots: false,
     responsive: {
       0: {
         items: 1,
         dots: false,
-        nav: false
+        nav: false,
+        stagePadding: 48
       },
       600: {
         items: 2,
@@ -3822,11 +3825,11 @@ function headerOnScroll() {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (this.window.pageYOffset > 75) {
+    if (this.window.pageYOffset > 48) {
       $('.header .container-fluid').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "0";
+        document.getElementById("header").style.top = "16px";
       } else {
         document.getElementById("header").style.top = "-145px";
       }
@@ -5756,7 +5759,7 @@ $(window).on('resize', function (e) {
     }
   }, 150);
 });
-},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/owl-carousels.js":"js/owl-carousels.js","./js/headerScript.js":"js/headerScript.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../AppData/Roaming/npm-cache/_npx/2972/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/owl-carousels.js":"js/owl-carousels.js","./js/headerScript.js":"js/headerScript.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../AppData/Roaming/npm-cache/_npx/11348/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -5784,7 +5787,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57896" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -5960,5 +5963,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/2972/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/11348/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map

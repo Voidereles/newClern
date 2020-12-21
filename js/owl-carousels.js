@@ -144,7 +144,8 @@ $(document).ready(function () {
     $('.owl-offer').owlCarousel({
         loop: true,
         margin: 10,
-        autoplay: true,
+        // autoplay: true,
+        autoplay: false,
         nav: false,
         dots: false,
         responsiveClass: true,
@@ -179,13 +180,15 @@ $(document).ready(function () {
         margin: 20,
         autoplay: true,
         autoplayTimeout: 2000,
+        autoplayHoverPause: true,
         nav: false,
         dots: false,
         responsive: {
             0: {
                 items: 1,
                 dots: false,
-                nav: false
+                nav: false,
+                stagePadding: 48,
             },
             600: {
                 items: 2,
