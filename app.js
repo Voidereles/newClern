@@ -3,8 +3,10 @@
 
 import 'owl.carousel'
 import './js/pageTransitioning.js';
-import './js/owl-carousels.js';
+import './js/mainCarousels.js';
+import './js/subpageCarousels.js';
 import './js/headerScript.js';
+import './js/aboutCounter.js'
 import anime from 'animejs/lib/anime.es.js';
 import AOS from 'aos';
 
@@ -15,22 +17,9 @@ window.onload = function () {
     });
 }
 
-function changeOwlMainHeight() {
-    const owlMainItems = document.querySelectorAll(".owl-main__item");
-    const owlMainImgHeight = document.querySelector(".owl-main__img").offsetHeight;
-    for (let i = 0; i < owlMainItems.length; ++i) {
-        owlMainItems[i].style.height = owlMainImgHeight + "px";
-    }
-}
+
 
 $(document).ready(function () {
-
-
-    if (window.innerWidth > 1200) {
-        changeOwlMainHeight();
-
-    }
-
     const allLang = document.querySelectorAll(".header__lang-all .text");
     Array.from(allLang).forEach(element => {
         element.addEventListener('click', () => {
@@ -55,7 +44,7 @@ $(document).ready(function () {
 
 });
 
-var textWrapper = document.querySelector('.owl-main__heading');
+var textWrapper = document.querySelector('.animated-heading');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 function animatedLetters() {
@@ -64,7 +53,7 @@ function animatedLetters() {
             loop: false
         })
         .add({
-            targets: '.owl-main__heading .letter',
+            targets: '.animated-heading .letter',
             scale: [4, 1],
             opacity: [0, 1],
             translateZ: 0,
@@ -81,14 +70,3 @@ function animatedLetters() {
 }
 
 animatedLetters();
-
-let resizeTimer;
-$(window).on('resize', function (e) {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-        if (window.innerWidth > 1200) {
-            changeOwlMainHeight();
-        }
-
-    }, 150);
-});

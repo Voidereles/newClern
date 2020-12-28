@@ -1,0 +1,285 @@
+@import url('owl.carousel/dist/assets/owl.carousel.css');
+@import url('bootstrap/dist/css/bootstrap.min.css');
+@import url('aos/dist/aos.css');
+// @import url('https://use.typekit.net/ngn2ooc.css');
+@import 'predefinied.scss';
+@import 'pageTrans.scss';
+@import 'style.scss';
+
+.about,
+.our-services {
+    min-height: 50vh;
+    position: relative;
+    color: white;
+    margin-top: 20vh;
+
+    &__background {
+        width: 65vw;
+        position: absolute;
+    }
+
+    .row {
+        position: absolute;
+        width: 35vw;
+        left: 30%;
+        top: 25%;
+    }
+
+    &__heading {
+        font-size: $fontSizeH1;
+    }
+
+    &__subheading {
+        font-size: $fontSizeBodyS;
+        line-height: 1.7;
+        position: relative;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+
+        &::before {
+            content: '';
+            width: 3vw;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 0.75rem;
+            left: -4vw;
+        }
+    }
+
+    &__p {
+        font-size: $fontSizeBodyXS;
+        text-align: justify;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+.purchase-cleaning {
+    min-height: 50vh;
+    position: relative;
+    color: white;
+    margin-top: 80px;
+
+    &__background {
+        width: 70%;
+        position: absolute;
+    }
+
+    &__heading {
+        padding-top: 150px;
+        font-size: $fontSizeH1;
+    }
+
+    &__p {
+        font-size: $fontSizeBodyS;
+    }
+}
+
+.about {
+    min-height: 70vh;
+}
+
+.insurance {
+    min-height: 400px;
+
+    &__img-oc,
+    &__img-allianz {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__img-oc {
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 10px 3px;
+    }
+
+
+    &__info {
+        font-size: $fontSizeBodyXS;
+    }
+}
+
+.numbers {
+    &__heading {
+        color: $clern-blue;
+        font-size: $fontSizeH2;
+    }
+
+    &__svg {
+        fill: white !important;
+        border-radius: 50%;
+
+        background: $clern-blue;
+        background-image: linear-gradient(90deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 99%);
+        width: 100px;
+        height: 100px;
+    }
+
+    &__amount {
+        color: $clern-blue;
+        font-size: $fontSizeH2;
+        line-height: 1;
+    }
+
+    &__img-description {
+        font-size: $fontSizeBodyS;
+    }
+}
+
+.comp-coop {
+    margin-bottom: -7rem;
+
+    .container-fluid {
+        border-top-left-radius: 10vh;
+        background-color: $clern-grey;
+        width: 90%;
+        padding: 3rem 1rem 10rem 1rem;
+    }
+
+    .owl-carousel .owl-stage {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-height: 75px;
+    }
+
+    &__item {
+        height: 75px;
+        width: 100%;
+    }
+
+    &__img {
+        object-fit: contain;
+        height: 100%;
+    }
+
+
+}
+
+
+
+@media (min-width: 1600px) {
+    .about {
+
+        &__heading,
+        &__description-container {
+            padding-left: 1rem !important;
+        }
+
+        &__subheading {
+            font-size: $fontSizeH3;
+
+            &::before {
+                top: 1.25rem;
+            }
+        }
+
+        &__p {
+            font-size: $fontSizeBodyL;
+        }
+
+    }
+
+    .insurance {
+        &__info {
+            font-size: $fontSizeBodyS;
+        }
+    }
+}
+
+@media (min-width: 2561px) {
+
+    .about__background,
+    .our-services__background {
+        width: 50vw;
+    }
+
+    .about,
+    .our-services {
+        .row {
+
+            left: initial;
+            right: 10vw;
+            color: black;
+            width: 40vw;
+        }
+
+        &__heading {
+            color: $clern-blue;
+        }
+
+        &__subheading {
+            &::before {
+                content: none;
+            }
+        }
+
+        &__subheading,
+        &__p {
+            text-shadow: none;
+        }
+
+    }
+}
+
+
+@media (max-width:1440px) {
+
+    .about,
+    .our-services {
+
+        min-height: 70vh;
+        position: relative;
+        color: white;
+
+        &__background {
+            width: 70%;
+            position: static;
+            background-size: contain;
+        }
+
+        .row {
+            text-align: center;
+            position: static;
+            width: 100%;
+            left: 0;
+            color: black;
+        }
+
+        &__heading {
+            color: $clern-blue;
+        }
+
+        &__subheading {
+            text-align: justify;
+        }
+
+        &__subheading,
+        &__p {
+            text-shadow: none;
+        }
+
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .header {
+        &-blue-tear {
+            right: 0;
+        }
+    }
+
+    .insurance__info {
+        max-width: 480px;
+        margin: auto;
+    }
+
+    .comp-coop {
+        .container-fluid {
+            width: 100%;
+        }
+    }
+}

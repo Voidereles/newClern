@@ -287,6 +287,10 @@
   left: -100%;
 }
 
+.no-radius {
+  border-radius: 0 !important;
+}
+
 .font-increased {
   font-size: 150%;
 }
@@ -475,6 +479,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: vag-rundschrift-d, Montserrat, Gotham, system-ui, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, メイリオ, Meiryo, Segoe UI, sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1,
@@ -852,6 +857,8 @@ span::selection {
   text-transform: uppercase;
   -webkit-transition: 400ms;
   transition: 400ms;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+          box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 }
 
 .header__btn:hover {
@@ -862,6 +869,18 @@ span::selection {
 .header__btn:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.header-blue-tear {
+  position: absolute;
+  width: 63%;
+  right: -8%;
+  top: 0;
+  overflow: hidden;
+}
+
+.header-blue-tear__bg {
+  width: 100%;
 }
 
 .owl-main__item {
@@ -1031,7 +1050,8 @@ span::selection {
   z-index: -1;
 }
 
-.owl-main .owl-dots {
+.owl-main .owl-dots,
+.owl-testimonials .owl-dots {
   position: absolute;
   top: 50%;
   right: 2vw;
@@ -1041,7 +1061,8 @@ span::selection {
           transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.owl-main .main-counter {
+.owl-main .main-counter,
+.owl-testimonials .main-counter {
   position: absolute;
   right: calc(1rem + 1px + 7vw);
   top: calc(50% + 85px);
@@ -1049,23 +1070,27 @@ span::selection {
   font-size: 1.25rem;
 }
 
-.owl-main .main-counter__number {
+.owl-main .main-counter__number,
+.owl-testimonials .main-counter__number {
   font-size: 2rem;
   margin-right: 5px;
   font-weight: 400;
 }
 
-.owl-main .owl-dots .active span {
+.owl-main .owl-dots .active span,
+.owl-testimonials .owl-dots .active span {
   -webkit-transform: translate(-2px, -13px) scale(1.5);
           transform: translate(-2px, -13px) scale(1.5);
   margin-right: 6px;
 }
 
-.owl-main .owl-dots button {
+.owl-main .owl-dots button,
+.owl-testimonials .owl-dots button {
   outline: none;
 }
 
-.owl-main .owl-dots .owl-dot span {
+.owl-main .owl-dots .owl-dot span,
+.owl-testimonials .owl-dots .owl-dot span {
   height: 2px;
   width: 2px;
   -webkit-box-shadow: inset white 0 0 0px 2px;
@@ -1080,7 +1105,8 @@ span::selection {
   outline: none;
 }
 
-.owl-main .bar {
+.owl-main .bar,
+.owl-testimonials .bar {
   width: 0%;
   height: 100%;
   background: #fff;
@@ -1089,7 +1115,8 @@ span::selection {
   position: relative;
 }
 
-.owl-main .progressBar {
+.owl-main .progressBar,
+.owl-testimonials .progressBar {
   display: inline-block;
   width: 4rem;
   height: 2px;
@@ -1100,7 +1127,8 @@ span::selection {
           transform: translateY(-14px);
 }
 
-.owl-main .line-container {
+.owl-main .line-container,
+.owl-testimonials .line-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1434,10 +1462,6 @@ span::selection {
   margin: 0 auto;
 }
 
-.testimonials .no-radius {
-  border-radius: 0 !important;
-}
-
 .testimonials__portrait,
 .testimonials .owl-carousel .owl-item img {
   border-radius: 50%;
@@ -1474,6 +1498,16 @@ span::selection {
   left: 3rem;
   -webkit-transform: matrix(3.58677, 0, 0, 3.58644, 0, 0);
           transform: matrix(3.58677, 0, 0, 3.58644, 0, 0);
+}
+
+.testimonials .owl-dots {
+  position: relative;
+  right: initial;
+  margin-top: 1rem;
+  padding: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .testimonials .owl-nav span {
@@ -1580,10 +1614,10 @@ span::selection {
   border: 2px solid white;
   position: absolute;
   color: white;
-  bottom: -100%;
-  left: -100%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: scaleX(1.5) scaleY(1.5) translate(-50%, 50%);
+          transform: scaleX(1.5) scaleY(1.5) translate(-50%, 50%);
   display: block;
   text-align: center;
   line-height: 36px;
@@ -1597,8 +1631,8 @@ span::selection {
 
 .news__item:hover .news__img-container::before {
   opacity: 1;
-  bottom: 50%;
-  left: 50%;
+  -webkit-transform: scaleX(1) scaleY(1) translate(-50%, 50%);
+          transform: scaleX(1) scaleY(1) translate(-50%, 50%);
 }
 
 .news__img-container::after {
@@ -2137,9 +2171,24 @@ span::selection {
   }
 }
 
+@media (min-width: 1600px) {
+  .header-blue-tear {
+    right: -6%;
+    top: -5%;
+  }
+}
+
 @media (min-width: 1921px) {
   .steps__border-dots.border-bottom-right {
     left: 42.6%;
+  }
+}
+
+@media (min-width: 2561px) {
+  .header-blue-tear {
+    width: 46%;
+    right: 9%;
+    top: -6%;
   }
 }
 

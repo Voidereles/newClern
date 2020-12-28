@@ -3632,7 +3632,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 //         }
 //     }]
 // })
-},{}],"js/owl-carousels.js":[function(require,module,exports) {
+},{}],"js/mainCarousels.js":[function(require,module,exports) {
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 $(document).ready(function () {
@@ -3686,6 +3686,7 @@ $(document).ready(function () {
   owlMain.on('initialized.owl.carousel', function (event) {
     // $('.owl-main .owl-dots .active').insertAdjacentHTML('<div class="main-counter">dasdas</div>');
     counter(event);
+    changeOwlMainHeight();
   });
   owlMain.on('translate.owl.carousel', function (event) {
     counter(event);
@@ -3693,6 +3694,7 @@ $(document).ready(function () {
   owlMain.owlCarousel((_owlMain$owlCarousel = {
     onInitialized: progressBar,
     onTranslate: moved,
+    onResize: changeOwlMainHeight,
     nav: false,
     dots: true,
     items: 1,
@@ -3721,6 +3723,17 @@ $(document).ready(function () {
     dots: true
   }, _defineProperty(_owlTestimonials$owlC, "nav", true), _defineProperty(_owlTestimonials$owlC, "lazyLoad", true), _defineProperty(_owlTestimonials$owlC, "items", 1), _owlTestimonials$owlC));
 
+  function changeOwlMainHeight() {
+    if (window.innerWidth > 1200) {
+      var owlMainItems = document.querySelectorAll(".owl-main__item");
+      var owlMainImgHeight = document.querySelector(".owl-main__img").offsetHeight;
+
+      for (var i = 0; i < owlMainItems.length; ++i) {
+        owlMainItems[i].style.height = owlMainImgHeight + "px";
+      }
+    }
+  }
+
   function interval() {
     if (isPause === false) {
       percentTime += 1 / time; //reset timer
@@ -3731,7 +3744,6 @@ $(document).ready(function () {
 
       if (percentTime >= 100) {
         //slide to next item 
-        console.log(true);
         $(".owl-main").trigger('next.owl.carousel');
         $(".owl-testimonials").trigger('next.owl.carousel');
       }
@@ -3818,6 +3830,30 @@ $(document).ready(function () {
     }
   });
 });
+},{}],"js/subpageCarousels.js":[function(require,module,exports) {
+$('.owl-companies').owlCarousel({
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  autoplayHoverPause: true,
+  dots: false,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false
+    },
+    600: {
+      items: 3,
+      nav: false
+    },
+    992: {
+      items: 5,
+      nav: true,
+      loop: false
+    }
+  }
+});
 },{}],"js/headerScript.js":[function(require,module,exports) {
 function headerOnScroll() {
   var prevScrollpos = window.pageYOffset;
@@ -3892,6 +3928,34 @@ $(document).ready(function () {
       });
     }
   });
+});
+},{}],"js/aboutCounter.js":[function(require,module,exports) {
+var a = 0;
+$(window).scroll(function () {
+  var counter = $('#counter');
+  var oTop = counter.offset().top - window.innerHeight;
+
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.count').each(function () {
+      var $this = $(this),
+          countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+        countNum: countTo
+      }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function step() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function complete() {
+          $this.text(this.countNum);
+        }
+      });
+    });
+    a = 1;
+  }
 });
 },{}],"node_modules/animejs/lib/anime.es.js":[function(require,module,exports) {
 "use strict";
@@ -5672,9 +5736,13 @@ require("owl.carousel");
 
 require("./js/pageTransitioning.js");
 
-require("./js/owl-carousels.js");
+require("./js/mainCarousels.js");
+
+require("./js/subpageCarousels.js");
 
 require("./js/headerScript.js");
+
+require("./js/aboutCounter.js");
 
 var _animeEs = _interopRequireDefault(require("animejs/lib/anime.es.js"));
 
@@ -5690,20 +5758,7 @@ window.onload = function () {
   });
 };
 
-function changeOwlMainHeight() {
-  var owlMainItems = document.querySelectorAll(".owl-main__item");
-  var owlMainImgHeight = document.querySelector(".owl-main__img").offsetHeight;
-
-  for (var i = 0; i < owlMainItems.length; ++i) {
-    owlMainItems[i].style.height = owlMainImgHeight + "px";
-  }
-}
-
 $(document).ready(function () {
-  if (window.innerWidth > 1200) {
-    changeOwlMainHeight();
-  }
-
   var allLang = document.querySelectorAll(".header__lang-all .text");
   Array.from(allLang).forEach(function (element) {
     element.addEventListener('click', function () {
@@ -5724,14 +5779,14 @@ $(document).ready(function () {
     }
   });
 });
-var textWrapper = document.querySelector('.owl-main__heading');
+var textWrapper = document.querySelector('.animated-heading');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 function animatedLetters() {
   _animeEs.default.timeline({
     loop: false
   }).add({
-    targets: '.owl-main__heading .letter',
+    targets: '.animated-heading .letter',
     scale: [4, 1],
     opacity: [0, 1],
     translateZ: 0,
@@ -5750,16 +5805,7 @@ function animatedLetters() {
 }
 
 animatedLetters();
-var resizeTimer;
-$(window).on('resize', function (e) {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function () {
-    if (window.innerWidth > 1200) {
-      changeOwlMainHeight();
-    }
-  }, 150);
-});
-},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/owl-carousels.js":"js/owl-carousels.js","./js/headerScript.js":"js/headerScript.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/mainCarousels.js":"js/mainCarousels.js","./js/subpageCarousels.js":"js/subpageCarousels.js","./js/headerScript.js":"js/headerScript.js","./js/aboutCounter.js":"js/aboutCounter.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -5787,7 +5833,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41929" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42865" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

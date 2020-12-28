@@ -91,6 +91,10 @@
   left: -100%;
 }
 
+.no-radius {
+  border-radius: 0 !important;
+}
+
 .font-increased {
   font-size: 150%;
 }

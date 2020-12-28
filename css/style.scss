@@ -27,6 +27,7 @@ body {
     // font-smoothing: antialiased;
     font-family: $fontStack;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 h1,
@@ -344,6 +345,7 @@ span {
         line-height: 60px;
         text-transform: uppercase;
         transition: $durationM;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 
         &:hover {
             background-color: $clern-blue;
@@ -354,6 +356,20 @@ span {
             transform: scale(0.95);
         }
     }
+
+    &-blue-tear {
+        position: absolute;
+        width: 63%;
+        right: -8%;
+        top: 0;
+        overflow: hidden;
+
+        &__bg {
+            width: 100%;
+        }
+    }
+
+
 }
 
 
@@ -513,7 +529,10 @@ span {
         // opacity: 0.4;
         // animation: mainOwlImgAnimation 1s forwards;
     }
+}
 
+.owl-main,
+.owl-testimonials {
     .owl-dots {
         position: absolute;
         top: 50%;
@@ -973,10 +992,6 @@ span {
         margin: 0 auto;
     }
 
-    .no-radius {
-        border-radius: 0 !important;
-    }
-
     &__portrait,
     .owl-carousel .owl-item img {
         border-radius: 50%;
@@ -1012,6 +1027,15 @@ span {
         top: 1rem;
         left: 3rem;
         transform: matrix(3.58676812988438, 0, 0, 3.58643712507357, 0, 0);
+    }
+
+    .owl-dots {
+        position: relative;
+        right: initial;
+        margin-top: 1rem;
+        padding: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .owl-nav span {
@@ -1116,9 +1140,11 @@ span {
         border: 2px solid white;
         position: absolute;
         color: white;
-        bottom: -100%;
-        left: -100%;
-        transform: translate(-50%, 50%);
+        // bottom: -100%;
+        // left: -100%;
+        bottom: 50%;
+        left: 50%;
+        transform: scaleX(1.5) scaleY(1.5) translate(-50%, 50%);
         display: block;
         text-align: center;
         line-height: 36px;
@@ -1131,8 +1157,9 @@ span {
 
     &__item:hover &__img-container::before {
         opacity: 1;
-        bottom: 50%;
-        left: 50%;
+        // bottom: 50%;
+        // left: 50%;
+        transform: scaleX(1) scaleY(1) translate(-50%, 50%);
     }
 
     &__img-container::after {
@@ -1706,6 +1733,11 @@ span {
         border-radius: 0;
     }
 
+    .testimonials {
+        .owl-nav span {
+            max-height: 48px;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -1730,12 +1762,34 @@ span {
     }
 }
 
+@media (min-width: 1600px) {
+    .header {
+        &-blue-tear {
+            right: -6%;
+            top: -5%;
+        }
+    }
+}
+
 @media (min-width: 1921px) {
+
     .steps {
         &__border-dots {
             &.border-bottom-right {
                 left: 42.6%;
             }
+        }
+    }
+
+}
+
+@media (min-width: 2561px) {
+
+    .header {
+        &-blue-tear {
+            width: 46%;
+            right: 9%;
+            top: -6%;
         }
     }
 }
