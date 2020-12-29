@@ -2,7 +2,7 @@ function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
-        if (this.window.pageYOffset > 48) {
+        if (this.window.pageYOffset > 36) {
             $('.header .container-fluid').addClass('scrolled');
 
 

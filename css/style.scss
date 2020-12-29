@@ -27,7 +27,7 @@ body {
     // font-smoothing: antialiased;
     font-family: $fontStack;
     font-weight: 300;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 h1,
@@ -68,7 +68,7 @@ span {
 
         &.scrolled {
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
-            margin-top: 0.75rem;
+            margin-top: 0.25rem;
             border-radius: 200px;
             background: linear-gradient(-90deg, $clern-blue 50%, white 50%);
             padding: 0 0.4rem;
@@ -357,17 +357,7 @@ span {
         }
     }
 
-    &-blue-tear {
-        position: absolute;
-        width: 63%;
-        right: -8%;
-        top: 0;
-        overflow: hidden;
 
-        &__bg {
-            width: 100%;
-        }
-    }
 
 
 }
@@ -1078,6 +1068,7 @@ span {
             transform: scale(0.8) translate(-10px, 10px);
         }
     }
+
 }
 
 
@@ -1240,6 +1231,7 @@ span {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         color: white;
         border-left: none;
+        max-width: 100%;
 
         &:focus {
             border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -1762,14 +1754,6 @@ span {
     }
 }
 
-@media (min-width: 1600px) {
-    .header {
-        &-blue-tear {
-            right: -6%;
-            top: -5%;
-        }
-    }
-}
 
 @media (min-width: 1921px) {
 
@@ -1781,15 +1765,4 @@ span {
         }
     }
 
-}
-
-@media (min-width: 2561px) {
-
-    .header {
-        &-blue-tear {
-            width: 46%;
-            right: 9%;
-            top: -6%;
-        }
-    }
 }

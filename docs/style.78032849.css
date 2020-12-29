@@ -871,7 +871,7 @@ span::selection {
           transform: scale(0.95);
 }
 
-.header-blue-tear {
+.header-tear {
   position: absolute;
   width: 63%;
   right: -8%;
@@ -879,7 +879,7 @@ span::selection {
   overflow: hidden;
 }
 
-.header-blue-tear__bg {
+.header-tear__bg {
   width: 100%;
 }
 
@@ -2175,7 +2175,7 @@ span::selection {
 }
 
 @media (min-width: 1600px) {
-  .header-blue-tear {
+  .header-tear {
     right: -6%;
     top: -5%;
   }
@@ -2188,7 +2188,7 @@ span::selection {
 }
 
 @media (min-width: 2561px) {
-  .header-blue-tear {
+  .header-tear {
     width: 46%;
     right: 9%;
     top: -6%;

@@ -1,14 +1,24 @@
 // import barba from '@barba/core';
 // import gsap from "gsap";
 
-import 'owl.carousel'
+// import './js/map.js';
+import 'owl.carousel';
+import './js/mySticky.js';
 import './js/pageTransitioning.js';
 import './js/mainCarousels.js';
 import './js/subpageCarousels.js';
 import './js/headerScript.js';
-import './js/aboutCounter.js'
+import './js/aboutCounter.js';
 import anime from 'animejs/lib/anime.es.js';
 import AOS from 'aos';
+import 'bootstrap';
+import stickybits from 'stickybits'
+
+
+var stickybit = stickybits(".sticky-selector");
+stickybits('.purchase__summary', {
+    stickyBitStickyOffset: 80
+});
 
 
 window.onload = function () {

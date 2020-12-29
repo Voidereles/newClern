@@ -21,3 +21,14 @@ $('.owl-companies').owlCarousel({
         }
     }
 })
+
+
+$('.owl-services').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    dots: true,
+    items: 1
+})

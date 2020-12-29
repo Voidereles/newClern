@@ -103,6 +103,17 @@
   font-size: 200%;
 }
 
+.text-highlight {
+  color: #14b8eb;
+  font-weight: 400 !important;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.textColor-green {
+  color: #66ba5a;
+}
+
 .form-group {
   position: relative;
 }
@@ -119,7 +130,12 @@
   transition: transform 150ms ease-out, font-size 150ms ease-out, -webkit-transform 150ms ease-out;
 }
 
-.focused .form-label {
+.form__rules-confirm {
+  font-size: 1rem;
+}
+
+.focused .form-label,
+.form-label--onTop {
   -webkit-transform: translateY(-125%);
           transform: translateY(-125%);
   font-size: .75em;
@@ -151,6 +167,126 @@
 .form-input.filled {
   -webkit-box-shadow: 0 2px 0 0 lightgreen;
           box-shadow: 0 2px 0 0 lightgreen;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #14b8eb;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark::after {
+  left: 10px;
+  top: 5px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion .card {
+  border: none;
+  background-color: transparent;
+}
+
+.accordion .card .card-header {
+  border-bottom-right-radius: 35px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion .card .card-header.collapsed {
+  background: #f3f7ff;
+  border-top-left-radius: 35px;
+}
+
+.accordion .card .card-header.collapsed .company-services__heading {
+  color: #66ba5a;
+}
+
+.accordion .card .card-header:not(.collapsed) {
+  background: #f3f7ff;
+}
+
+.accordion .card .card-header:not(.collapsed)::before {
+  left: 0;
+}
+
+.accordion .card .card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 110%;
+  background: #66ba5a;
+  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom-right-radius: 35px;
+}
+
+.accordion .accordion .card:not(:first-of-type) .card-header:first-child {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.accordion .card-body {
+  background-color: white;
 }
 
 @-webkit-keyframes mainOwlImgAnimation {
