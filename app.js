@@ -2,6 +2,9 @@
 // import gsap from "gsap";
 
 // import './js/map.js';
+import 'lazysizes';
+// import a plugin
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'owl.carousel';
 import './js/mySticky.js';
 import './js/pageTransitioning.js';
