@@ -4379,8 +4379,9 @@ $(document).ready(function () {
   $('.owl-news').owlCarousel({
     loop: true,
     margin: 20,
-    autoplay: true,
-    autoplayTimeout: 2000,
+    // autoplay: true,
+    autoplay: false,
+    // autoplayTimeout: 2000,
     autoplayHoverPause: true,
     nav: false,
     dots: false,
@@ -22773,7 +22774,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43879" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
