@@ -1,3 +1,4 @@
+import anime from 'animejs/lib/anime.es.js';
 var textWrapper = document.querySelector('.animated-heading');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 

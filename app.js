@@ -4,7 +4,7 @@
 // import './js/map.js';
 // import 'lazysizes';
 // import a plugin
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'owl.carousel';
 import './js/mySticky.js';
 import './js/pageTransitioning.js';
@@ -12,7 +12,6 @@ import './js/mainCarousels.js';
 import './js/subpageCarousels.js';
 import './js/headerScript.js';
 import './js/aboutCounter.js';
-import anime from 'animejs/lib/anime.es.js';
 import './js/animatedLetters.js';
 import AOS from 'aos';
 import 'bootstrap';
