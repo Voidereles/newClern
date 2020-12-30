@@ -1654,7 +1654,7 @@ span::selection {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url("/10b68b08bde844661cc4bf5231fcdf68.png");
+  background-image: url("/background-steps-with-tel.31fcdf68.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -1875,7 +1875,7 @@ span::selection {
   opacity: 0;
   -webkit-transition: 600ms;
   transition: 600ms;
-  background: url("/6a62f86f37d8ae35091060ad8feaa854.png");
+  background: url("/offer-flats-bg.8feaa854.png");
   top: 0;
   left: 0;
   right: 0;
@@ -2001,7 +2001,7 @@ span::selection {
 .testimonials__blockquote::before {
   content: ' ';
   position: absolute;
-  background-image: url("/cf275c9efc92050217eb4006b8741379.png");
+  background-image: url("/quotesign.b8741379.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 0.75rem;
@@ -2049,11 +2049,11 @@ span::selection {
 
 .testimonials .owl-prev span {
   left: 5%;
-  background-image: url("/cc59e9a59720a5459f197eb120ddb553.svg");
+  background-image: url("/light-arrow-left.20ddb553.svg");
 }
 
 .testimonials .owl-next span {
-  background-image: url("/23bbf3d83982e2c1f577a369862f6b7b.svg");
+  background-image: url("/light-arrow-right.862f6b7b.svg");
   right: 5%;
 }
 
@@ -2993,7 +2993,7 @@ span::selection {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-image: url("/58a7befe7c9b56edaf71a54ea4643d55.svg");
+  background-image: url("/arrow-right.a4643d55.svg");
 }
 
 .company-services .owl-nav span:active {
@@ -3009,7 +3009,7 @@ span::selection {
 .company-services .owl-next span::after {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("/58a7befe7c9b56edaf71a54ea4643d55.svg");
+  background-image: url("/arrow-right.a4643d55.svg");
 }
 
 .company-services .owl-services .owl-dots {
@@ -3220,7 +3220,7 @@ span::selection {
   color: transparent;
   background: none;
   width: 0.9rem;
-  background-image: url("/76ed9df87a1f48cba364d599ba13605c.svg");
+  background-image: url("/calendar.ba13605c.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -3233,7 +3233,7 @@ span::selection {
   color: transparent;
   background: none;
   width: 0.9rem;
-  background-image: url("/92d03753bbfd54f4792fa51644723310.svg");
+  background-image: url("/clock.44723310.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -3597,6 +3597,9 @@ span::selection {
   }
   .purchase__svg-container .steps__border-dots.svg {
     width: 160%;
+  }
+  .communication {
+    margin-top: 120px;
   }
 }
 

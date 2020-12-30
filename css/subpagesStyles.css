@@ -3409,5 +3409,8 @@ span::selection {
   .purchase__svg-container .steps__border-dots.svg {
     width: 160%;
   }
+  .communication {
+    margin-top: 120px;
+  }
 }
 /*# sourceMappingURL=subpagesStyles.css.map */
