@@ -7240,6 +7240,33 @@ anime.random = function (min, max) {
 
 var _default = anime;
 exports.default = _default;
+},{}],"js/animatedLetters.js":[function(require,module,exports) {
+var textWrapper = document.querySelector('.animated-heading');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+function animatedLetters() {
+  anime.timeline({
+    loop: false
+  }).add({
+    targets: '.animated-heading .letter',
+    scale: [4, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function delay(el, i) {
+      return 70 * i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+}
+
+animatedLetters();
 },{}],"node_modules/aos/dist/aos.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -25381,8 +25408,6 @@ var global = arguments[3];
 },{"jquery":"node_modules/jquery/dist/jquery.js","popper.js":"node_modules/popper.js/dist/esm/popper.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
-require("lazysizes");
-
 require("lazysizes/plugins/parent-fit/ls.parent-fit");
 
 require("owl.carousel");
@@ -25401,6 +25426,8 @@ require("./js/aboutCounter.js");
 
 var _animeEs = _interopRequireDefault(require("animejs/lib/anime.es.js"));
 
+require("./js/animatedLetters.js");
+
 var _aos = _interopRequireDefault(require("aos"));
 
 require("bootstrap");
@@ -25412,6 +25439,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import barba from '@barba/core';
 // import gsap from "gsap";
 // import './js/map.js';
+// import 'lazysizes';
 // import a plugin
 var stickybit = (0, _stickybits.default)(".sticky-selector");
 (0, _stickybits.default)('.purchase__summary', {
@@ -25453,33 +25481,7 @@ $(document).ready(function () {
     });
   });
 });
-var textWrapper = document.querySelector('.animated-heading');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-function animatedLetters() {
-  _animeEs.default.timeline({
-    loop: false
-  }).add({
-    targets: '.animated-heading .letter',
-    scale: [4, 1],
-    opacity: [0, 1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 950,
-    delay: function delay(el, i) {
-      return 70 * i;
-    }
-  }).add({
-    targets: '.ml2',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-}
-
-animatedLetters();
-},{"lazysizes":"node_modules/lazysizes/lazysizes.js","lazysizes/plugins/parent-fit/ls.parent-fit":"node_modules/lazysizes/plugins/parent-fit/ls.parent-fit.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/mySticky.js":"js/mySticky.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/mainCarousels.js":"js/mainCarousels.js","./js/subpageCarousels.js":"js/subpageCarousels.js","./js/headerScript.js":"js/headerScript.js","./js/aboutCounter.js":"js/aboutCounter.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","aos":"node_modules/aos/dist/aos.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","stickybits":"node_modules/stickybits/dist/stickybits.es.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"lazysizes/plugins/parent-fit/ls.parent-fit":"node_modules/lazysizes/plugins/parent-fit/ls.parent-fit.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./js/mySticky.js":"js/mySticky.js","./js/pageTransitioning.js":"js/pageTransitioning.js","./js/mainCarousels.js":"js/mainCarousels.js","./js/subpageCarousels.js":"js/subpageCarousels.js","./js/headerScript.js":"js/headerScript.js","./js/aboutCounter.js":"js/aboutCounter.js","animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","./js/animatedLetters.js":"js/animatedLetters.js","aos":"node_modules/aos/dist/aos.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","stickybits":"node_modules/stickybits/dist/stickybits.es.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25507,7 +25509,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39157" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36129" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

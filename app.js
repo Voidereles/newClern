@@ -2,7 +2,7 @@
 // import gsap from "gsap";
 
 // import './js/map.js';
-import 'lazysizes';
+// import 'lazysizes';
 // import a plugin
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'owl.carousel';
@@ -13,6 +13,7 @@ import './js/subpageCarousels.js';
 import './js/headerScript.js';
 import './js/aboutCounter.js';
 import anime from 'animejs/lib/anime.es.js';
+import './js/animatedLetters.js';
 import AOS from 'aos';
 import 'bootstrap';
 import stickybits from 'stickybits'
@@ -63,30 +64,3 @@ $(document).ready(function () {
         });
     });
 });
-
-var textWrapper = document.querySelector('.animated-heading');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-function animatedLetters() {
-
-    anime.timeline({
-            loop: false
-        })
-        .add({
-            targets: '.animated-heading .letter',
-            scale: [4, 1],
-            opacity: [0, 1],
-            translateZ: 0,
-            easing: "easeOutExpo",
-            duration: 950,
-            delay: (el, i) => 70 * i
-        }).add({
-            targets: '.ml2',
-            opacity: 0,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
-        });
-}
-
-animatedLetters();
