@@ -1,10 +1,10 @@
 // import barba from '@barba/core';
 // import gsap from "gsap";
-
 // import './js/map.js';
 // import 'lazysizes';
 // import a plugin
 // import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import AOS from 'aos';
 import 'owl.carousel';
 import './js/mySticky.js';
 import './js/pageTransitioning.js';
@@ -12,8 +12,7 @@ import './js/mainCarousels.js';
 import './js/subpageCarousels.js';
 import './js/headerScript.js';
 import './js/aboutCounter.js';
-import './js/animatedLetters.js';
-import AOS from 'aos';
+// import './js/animatedLetters.js';
 import 'bootstrap';
 import stickybits from 'stickybits'
 
@@ -26,7 +25,7 @@ stickybits('.purchase__summary', {
 
 window.onload = function () {
     AOS.init({
-        duration: 700,
+        duration: 650,
     });
 }
 

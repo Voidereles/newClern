@@ -669,7 +669,8 @@ span {
         position: relative;
         text-align: center;
 
-        img {
+        img,
+        picture {
             margin: 6px;
         }
     }
@@ -983,7 +984,8 @@ span {
     }
 
     &__portrait,
-    .owl-carousel .owl-item img {
+    .owl-carousel .owl-item img,
+    .owl-carousel .owl-item picture {
         border-radius: 50%;
         background-color: white;
         width: 90px;
@@ -1402,6 +1404,11 @@ span {
         width: calc(100% - 2rem);
         padding: 0;
         height: 48px;
+        max-width: 100vw;
+        left: 0;
+        left: 0.5rem;
+        right: 0.5rem;
+        width: calc(100vw - 1rem);
 
         .container-fluid {
             margin-top: 0.75rem;
