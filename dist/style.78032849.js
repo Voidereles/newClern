@@ -202,7 +202,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/16732/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/16732/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -234,7 +234,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -269,12 +269,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","aos/dist/aos.css":"node_modules/aos/dist/aos.css","./..\\images\\webp\\background-steps-with-tel.webp":[["background-steps-with-tel.f3ca5524.webp","images/webp/background-steps-with-tel.webp"],"images/webp/background-steps-with-tel.webp"],"./..\\images\\offer-flats-bg.png":[["offer-flats-bg.8feaa854.png","images/offer-flats-bg.png"],"images/offer-flats-bg.png"],"./..\\images\\quotesign.png":[["quotesign.b8741379.png","images/quotesign.png"],"images/quotesign.png"],"./..\\images\\svg\\light-arrow-left.svg":[["light-arrow-left.20ddb553.svg","images/svg/light-arrow-left.svg"],"images/svg/light-arrow-left.svg"],"./..\\images\\svg\\light-arrow-right.svg":[["light-arrow-right.862f6b7b.svg","images/svg/light-arrow-right.svg"],"images/svg/light-arrow-right.svg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","aos/dist/aos.css":"node_modules/aos/dist/aos.css","./..\\images\\webp\\background-steps-with-tel.webp":[["background-steps-with-tel.f3ca5524.webp","images/webp/background-steps-with-tel.webp"],"images/webp/background-steps-with-tel.webp"],"./..\\images\\offer-flats-bg.png":[["offer-flats-bg.8feaa854.png","images/offer-flats-bg.png"],"images/offer-flats-bg.png"],"./..\\images\\quotesign.png":[["quotesign.b8741379.png","images/quotesign.png"],"images/quotesign.png"],"./..\\images\\svg\\light-arrow-left.svg":[["light-arrow-left.20ddb553.svg","images/svg/light-arrow-left.svg"],"images/svg/light-arrow-left.svg"],"./..\\images\\svg\\light-arrow-right.svg":[["light-arrow-right.862f6b7b.svg","images/svg/light-arrow-right.svg"],"images/svg/light-arrow-right.svg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -302,7 +302,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61019" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62824" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -478,5 +478,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/21512/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/15568/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.78032849.js.map

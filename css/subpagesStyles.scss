@@ -846,6 +846,10 @@
     .about,
     .our-services {
 
+        .container {
+            padding: 0;
+        }
+
         position: relative;
         color: white;
 
@@ -861,6 +865,7 @@
             width: 100%;
             left: 0;
             color: black;
+            margin: auto;
         }
 
         &__heading {
