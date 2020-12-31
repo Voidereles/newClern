@@ -2148,4 +2148,10 @@ span::selection {
     left: 42.6%;
   }
 }
+
+@media (min-width: 2561px) {
+  .steps__background {
+    top: -5.5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
