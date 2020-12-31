@@ -5,6 +5,10 @@
 @import url("owl.carousel/dist/assets/owl.carousel.css");
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("aos/dist/aos.css");
+picture img {
+  width: 100%;
+}
+
 .container-fluid {
   max-width: 1700px;
 }
@@ -407,6 +411,10 @@ ul.transition li {
         animation-fill-mode: initial;
     }
 } */
+picture img {
+  width: 100%;
+}
+
 .container-fluid {
   max-width: 1700px;
 }
@@ -1466,13 +1474,22 @@ span::selection {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url("../images/webp/background-steps-with-tel.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-color: #fff;
-  background-position-x: -22vmin;
-  background-position-y: -30px;
-  padding: 3rem 0 17vw 0;
+  padding: 5rem 0 17vw 0;
+}
+
+.steps__background {
+  width: 104%;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  top: -2rem;
+}
+
+.steps__background img {
+  left: -10%;
+  position: relative;
+  z-index: 0;
 }
 
 .steps__border-dots {
@@ -1489,7 +1506,7 @@ span::selection {
   height: 50%;
   border-top: none;
   border-left: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .steps__border-dots.only-height {
@@ -2563,10 +2580,9 @@ span::selection {
 
 .about__subheading,
 .our-services__subheading {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.7;
   position: relative;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
 }
 
 .about__subheading::before,
@@ -2582,9 +2598,8 @@ span::selection {
 
 .about__p,
 .our-services__p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: justify;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 .about {
@@ -2976,7 +2991,6 @@ span::selection {
   height: 80px;
   background-color: #5DB65A;
   background-image: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
-  background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
   line-height: 80px;
 }
 

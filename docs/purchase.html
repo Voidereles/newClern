@@ -108,7 +108,7 @@
 
             <section class="purchase-intro">
                 <img class="purchase-intro__background" src="background_purchase.2fd68514.png" alt="">
-                <div class="container-fluid">
+                <div class="container-fluid px-0">
                     <div class="container">
                         <div class="row mx-0 mt-xl-4">
                             <h1 class="purchase-intro__heading col-12 mb-4 text-light-green">Zamów sprzątanie</h1>
@@ -128,7 +128,7 @@
             </section>
 
             <section class="purchase mb-5">
-                <div class="container-fluid">
+                <div class="container-fluid px-0">
                     <div class="container">
                         <div class="row text-center justify-content-center w-100 mt-2">
                             <div class="purchase__step col-12 col-md-4 col-lg-3 active">
@@ -188,23 +188,23 @@
                                     <div class="row m-0">
 
                                         <!-- LOKALIZACJA -->
-                                        <h4 class="purchase__form-heading col-12 pl-0">Lokalizacja:</h4>
+                                        <h4 class="purchase__form-heading col-12">Lokalizacja:</h4>
                                         <div class="row w-100 m-0">
-                                            <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
+                                            <div class="purchase__form-description col-12 col-lg-3 mt-3">Gdzie mamy
                                                 przyjechać?
                                             </div>
-                                            <div class="col-12 col-lg-9 pl-0">
-                                                <div class="row m-0 pt-2">
-                                                    <div class="form-group col-12 col-md-6 pl-0">
+                                            <div class="col-12 col-lg-9 pr-md-3">
+                                                <div class="row pt-2">
+                                                    <div class="form-group col-12 col-md-6">
                                                         <label class="form-label" for="zipcode">Kod pocztowy (bez
                                                             myślnika)</label>
                                                         <input id="zipcode" name="zipcode" class="form-input" type="text" pattern="[0-9]*" max="9999999" required="">
                                                     </div>
-                                                    <div class="form-group col-12 col-md-6 pl-0">
+                                                    <div class="form-group col-12 col-md-6">
                                                         <label class="form-label" for="city">Miejscowość</label>
                                                         <input id="city" name="city" class="form-input" type="text" required="">
                                                     </div>
-                                                    <div class="form-group col-12 col-lg-12 pl-0 mt-lg-3">
+                                                    <div class="form-group col-12 col-lg-12 mt-lg-3">
                                                         <label class="form-label" for="street">Ulica i nr lokalu</label>
                                                         <input id="street" name="street" class="form-input pr-4" type="text" required="">
 
@@ -226,15 +226,15 @@
                                         </div>
 
                                         <!-- TERMIN -->
-                                        <h4 class="purchase__form-heading col-12 pl-0 mt-lg-4">Termin:</h4>
-                                        <div class="row w-100 m-0 pr-lg-3 mt-2">
-                                            <div class="form-group col-6 col-lg-6 pl-0">
+                                        <h4 class="purchase__form-heading col-12 mt-lg-4">Termin:</h4>
+                                        <div class="row w-100 pr-lg-3 mt-2">
+                                            <div class="form-group col-12 col-lg-6 pl-0">
                                                 <label class="form-label form-label--onTop" for="date">Data</label>
                                                 <input id="date" name="date" aria-label="date" min="2020-12-29" class="form-input purchase__special-input" type="date">
                                                 <!-- Można by zrobić, aby nie można było wprowadzać dat z przeszłości -->
 
                                             </div>
-                                            <div class="form-group col-6 col-lg-6 pl-0">
+                                            <div class="form-group col-12 col-lg-6 pl-0">
                                                 <label class="form-label form-label--onTop" for="hour">Godzina</label>
                                                 <input id="hour" name="hour" aria-label="time" min="2020-12-29" class="form-input purchase__special-input" type="time">
 
@@ -242,10 +242,10 @@
                                         </div>
 
                                         <!-- WYBÓR STANDARDU -->
-                                        <h4 class="purchase__form-heading col-12 pl-0 mt-5 mb-4">Skonfiguruj usługę:
+                                        <h4 class="purchase__form-heading col-12 mt-5 mb-4">Skonfiguruj usługę:
                                         </h4>
 
-                                        <div class="accordion col-12 pl-0 pr-4" id="accordion">
+                                        <div class="accordion col-12 pr-4" id="accordion">
                                             <div class="card py-1">
                                                 <label class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" for="standardType">
                                                     <input type="radio" name="standardType" id="standardType" aria-label="standardType">
@@ -468,7 +468,7 @@
                                             <!-- 
                                         </div>
 
-                                        <div class="accordion col-12 pl-0 pr-4" id="accordion"> -->
+                                        <div class="accordion col-12 pr-4" id="accordion"> -->
                                             <div class="card py-1">
                                                 <label class="card-header collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" for="standardPlusType">
                                                     <input type="radio" name="standardType" id="standardPlusType" aria-label="standardPlusType">
@@ -694,7 +694,7 @@
 
 
 
-                                        <h4 class="purchase__form-heading col-12 pl-0 mt-4">Finalizuj zamówienie:</h4>
+                                        <h4 class="purchase__form-heading col-12 mt-4">Finalizuj zamówienie:</h4>
                                         <div class="col-12 col-12 mt-2 pl-0">
                                             <div class="row">
                                                 <div class="form-group col-12 col-lg-6 mt-2">
@@ -725,7 +725,7 @@
                                         </div>
 
 
-                                        <div class="col-12 pl-0 my-4">
+                                        <div class="col-12 my-4">
                                             <div class="checkbox">
                                                 <label class="checkbox-container">
                                                     <input type="checkbox" required="">

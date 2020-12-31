@@ -48,10 +48,10 @@
     }
 
     &__subheading {
-        font-size: $fontSizeBodyS;
+        font-size: $fontSizeBodyM;
         line-height: 1.7;
         position: relative;
-        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+        // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
 
         &::before {
             content: '';
@@ -65,9 +65,9 @@
     }
 
     &__p {
-        font-size: $fontSizeBodyXS;
+        font-size: $fontSizeBodyS;
         text-align: justify;
-        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+        // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -428,9 +428,6 @@
             height: 80px;
             background-color: #5DB65A;
             background-image: linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
-            background-image: -moz-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
-            background-image: -webkit-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
-            background-image: -ms-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
             line-height: 80px;
 
             &-number {

@@ -2,6 +2,10 @@
 @import url("owl.carousel/dist/assets/owl.carousel.css");
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("aos/dist/aos.css");
+picture img {
+  width: 100%;
+}
+
 .container-fluid {
   max-width: 1700px;
 }
@@ -1074,13 +1078,22 @@ span::selection {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url("../images/webp/background-steps-with-tel.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-color: #fff;
-  background-position-x: -22vmin;
-  background-position-y: -30px;
-  padding: 3rem 0 17vw 0;
+  padding: 5rem 0 17vw 0;
+}
+
+.steps__background {
+  width: 104%;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  top: -2rem;
+}
+
+.steps__background img {
+  left: -10%;
+  position: relative;
+  z-index: 0;
 }
 
 .steps__border-dots {
@@ -1097,7 +1110,7 @@ span::selection {
   height: 50%;
   border-top: none;
   border-left: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .steps__border-dots.only-height {
@@ -1780,9 +1793,6 @@ span::selection {
   .owl-main__btn {
     margin-top: 1.5rem !important;
   }
-  .steps__border-dots.only-height {
-    display: none;
-  }
 }
 
 @media (min-width: 1201px) and (max-width: 1439px) and (orientation: landscape) {
@@ -2026,8 +2036,8 @@ span::selection {
   }
   .steps__border-dots {
     top: -39.2%;
-    left: 33.8%;
-    width: 25%;
+    left: 43.8%;
+    width: 15%;
   }
   .steps__border-dots.only-height {
     top: -15%;
@@ -2059,8 +2069,8 @@ span::selection {
     margin-top: -10vh;
   }
   .steps__border-dots.only-height {
-    top: calc(-15% - 20vh);
-    height: 20vh;
+    top: calc(-15% - 8vh);
+    height: 9vh;
   }
 }
 
@@ -2076,6 +2086,14 @@ span::selection {
   }
   .steps__border-dots {
     display: none;
+  }
+  .steps__background {
+    top: -3rem;
+    width: 150%;
+  }
+  .steps__background img {
+    left: -5%;
+    opacity: 0.25;
   }
   .steps::before {
     content: '';
@@ -2116,6 +2134,12 @@ span::selection {
   }
   .owl-main__p {
     max-width: initial;
+  }
+  .steps__background {
+    top: 0;
+  }
+  .steps__background img {
+    opacity: 0.6;
   }
 }
 
