@@ -140,8 +140,8 @@ picture img {
 
 .focused .form-label,
 .form-label--onTop {
-  -webkit-transform: translateY(-125%);
-          transform: translateY(-125%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   font-size: .75em;
 }
 
